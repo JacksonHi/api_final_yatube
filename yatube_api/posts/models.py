@@ -44,7 +44,6 @@ class Comment(models.Model):
         'Дата добавления', auto_now_add=True, db_index=True)
 
 
-
 class Follow(models.Model):
     user = models.ForeignKey(
         User,
@@ -58,8 +57,9 @@ class Follow(models.Model):
         null=True,
         related_name='following'
     )
-    
+
     class Meta:
         constraints = [
-            UniqueConstraint(fields=['user', 'following'], name='unique_follow')
+            UniqueConstraint(
+                fields=['user', 'following'], name='unique_follow')
         ]
