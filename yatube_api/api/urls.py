@@ -10,8 +10,6 @@ router.register(
     CommentViewSet,
     basename='comment')
 router.register('groups', GroupViewSet, basename='group')
-# router.register('follow', FollowViewSet, basename='follow')
-
 
 urlpatterns = [
     path('v1/', include(router.urls)),
