@@ -63,3 +63,4 @@ class Follow(models.Model):
             UniqueConstraint(
                 fields=['user', 'following'], name='unique_follow')
         ]
+# test text
